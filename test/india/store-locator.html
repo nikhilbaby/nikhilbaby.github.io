@@ -1,0 +1,1988 @@
+
+<!DOCTYPE html>
+
+<html lang="hi-IN"  dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"
+><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"fe1015d864","applicationID":"3053325","transactionName":"NQFbYxEFXkcEUhdYDgxLdGEgS2NACkMGfQ4BBU1YESdfWhFDDF0NBxYWfg0AVUw=","queueTime":0,"applicationTime":169,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"Ug4OV1JVGwAAUVJRBQQ="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(15),c={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,o.indexOf("dev")!==-1&&(c.dev=!0),o.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&i.on("internal-error",function(t){r(t.stack)}),c.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,e,n)])}catch(c){try{i("ierr",[c,(new Date).getTime(),!0])}catch(s){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t){i("err",[t,(new Date).getTime()])}var i=t("handle"),a=t(16),c=t("ee"),s=t("loader"),f=window.onerror,u=!1,d=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),s.xhrWrappable&&t(9),u=!0)}c.on("fn-start",function(t,e,n){u&&(d+=1)}),c.on("fn-err",function(t,e,n){u&&(this.thrown=!0,o(n))}),c.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),c.on("internal-error",function(t){i("ierr",[t,(new Date).getTime(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),c=t(7),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState";t("loader").features.stn=!0,t(6);var g=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof g&&(this.bstStart=Date.now())}),o.on(w,function(t,e){var n=t[0];n instanceof g&&i("bst",[n,e,this.bstStart,Date.now()])}),a.on(m,function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),a.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),this.bstType])}),c.on(m,function(){this.bstStart=Date.now()}),c.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=Date.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){c.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),c=t(17)(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){var r=t("ee").get("history"),o=t(17)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,e,n){var r=t("ee").get("raf"),o=t(17)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(17)(i),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(s+u,r),i.on(c+u,o)},{}],9:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,w,"fn-",c)}function i(t){v.push(t),h&&(g=-g,b.data=g)}function a(){for(var t=0;t<v.length;t++)r([],v[t]);v.length&&(v=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t(17)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",w=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],v=[];e.exports=u;var y=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(m,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,y),y.prototype=p.prototype,d.inPlace(y.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var g=1,b=document.createTextNode(g);new h(a).observe(b,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],10:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var a=t.getResponseHeader("X-NewRelic-App-Data");a&&(e.cat=a.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return h(r)}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=h(r);i&&(n.txSize=i)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var a=0;a<d;a++)e.addEventListener(u[a],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{}],11:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],12:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(15),c=t(16),s=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var u=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(u,function(t,e){f[e]=o(d+e,!0,"api")}),f.addPageAction=o(d+"addPageAction",!0),f.setCurrentRouteName=o(d+"routeName",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var p=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(s.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{s.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){p[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],13:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],14:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],15:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],16:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],17:[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,c,s;try{a=this,r=i(arguments),c="function"==typeof n?n(r,a):n||{}}catch(f){l([f,"",[r,a,o],c])}u(e+"start",[r,a,o],c);try{return s=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],c),d}finally{u(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,c,s,f="-"===o.charAt(0);for(s=0;s<e.length;s++)c=e[s],a=t[c],r(a)||(t[c]=n(a,f?c+o:o,i,c))}function u(n,r,o){if(!s||e){var i=s;s=!0;try{t.emit(n,r,o)}catch(a){l([a,n,r,o])}s=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){l([r])}for(var o in t)c.call(t,o)&&(e[o]=t[o]);return e}function l(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,c,i):i()}function n(n,r,o){if(!l.aborted){t&&t(n,r,o);for(var i=e(o),a=h(n),c=a.length,s=0;s<c;s++)a[s].apply(i,r);var f=u[y[n]];return f&&f.push([g,n,r,i]),i}}function p(t,e){v[t]=h(t).concat(e)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(n)}function w(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var v={},y={},g={on:p,emit:n,get:m,listeners:h,context:e,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var c="nr@context",s=t("gos"),f=t(15),u={},d={},l=e.exports=o();l.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!b++){var t=g.info=NREUM.info,e=d.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(v,function(e,n){t[e]||(t[e]=n)}),c("mark",["onload",a()],null,"api");var n=d.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var c=t("handle"),s=t(15),f=t("ee"),u=window,d=u.document,l="addEventListener",p="attachEvent",h=u.XMLHttpRequest,m=h&&h.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:h,REQ:u.Request,EV:u.Event,PR:u.Promise,MO:u.MutationObserver},t(12);var w=""+location,v={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},y=h&&m&&m[l]&&!/CriOS/.test(navigator.userAgent),g=e.exports={offset:a(),origin:w,features:{},xhrWrappable:y};d[l]?(d[l]("DOMContentLoaded",i,!1),u[l]("load",r,!1)):(d[p]("onreadystatechange",o),u[p]("onload",r)),c("mark",["firstbyte",a()],null,"api");var b=0},{}]},{},["loader",2,10,4,3]);</script>
+    <title>Store Locator | Ray-Ban&#174;  India</title>
+    
+
+    
+<meta content="Ray-Ban.com" property="og:site_name" /><meta content="81958664405" property="fb:page_id" /><meta content="Enter your city and state or ZIP Code to find your nearest Ray-Ban retailer with our store locator" name="description" /><meta content="Ray-Ban Store Locator, Ray ban store, Ray-Ban " name="keywords" /><meta content="Store Locator - Ray-Ban®" property="og:title" /><meta content="article" property="og:type" /><meta content="Enter your city and state or ZIP Code to find your nearest Ray-Ban retailer with our store locator" property="og:description" /><meta content="https://www.ray-ban.com/_repository/_gui/2010/ray-ban-logo-social.jpg" property="og:image" /><meta content="https://www.ray-ban.com/india/store-locator" property="og:url" />
+
+
+    <meta content="RAY-BAN" name="author" />
+    <meta property="twitter:account_id" content="234264720" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="google-site-verification" content="2kKzvWFx937fMRzUV6GY0ZnsjUVGkwgLvhvvHHiYAl0" />
+    <meta name="google-site-verification" content="U2t1GqLqkPZyqcLs5thue8VJfWaUHWOxSTBedMg3l_E" />
+    <meta name="google-site-verification" content="LroiMXpC-PwyZ6tUeOVxJbUyD_C5vF1mQ_aEedxT6TE" />
+    <meta name="google-site-verification" content="inZB6OGxlDWb4b9TIAAU13mAlVUz9s3mxgZSTBiWOo4" />
+
+    <meta name="msapplication-config" content="none" />
+
+        <link rel="alternate" media="only screen and (max-width: 640px)" href="https://www.ray-ban.com/india/mobile/store-locator" />
+<link rel="canonical" href="store-locator.html" />
+
+
+
+    
+        <link rel="alternate" href="../india.html" hreflang="x-default" />
+
+    <!--[if lt IE 9]>
+    <script src="/_repository/_gp/_ecma/html5shiv.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="https://www.ray-ban.com/_repository/_css/dist/common_dmp_desktop_ltr.min.css" />
+    <link rel="stylesheet" href="https://www.ray-ban.com/_repository/_static/_dmp/_css/shared.css" />
+    <link rel="apple-touch-icon" href="https://www.ray-ban.com/_repository/_resources/_images/touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://www.ray-ban.com/_repository/_resources/_images/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://www.ray-ban.com/_repository/_resources/_images/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://www.ray-ban.com/_repository/_resources/_images/touch-icon-ipad-retina.png">
+        <link rel="alternate" href="http://www.ray-ban.com/australia/store-locator" hreflang="en-AU" />
+        <link rel="alternate" href="http://www.ray-ban.com/brazil/store-locator" hreflang="pt-BR" />
+        <link rel="alternate" href="http://www.ray-ban.com/canada/en/store-locator" hreflang="en-CA" />
+        <link rel="alternate" href="http://www.ray-ban.com.cn/zh/store-locator" hreflang="zh-CN" />
+        <link rel="alternate" href="http://www.ray-ban.com/denmark/store-locator" hreflang="en-DK" />
+        <link rel="alternate" href="http://www.ray-ban.com/finland/store-locator" hreflang="fi-FI" />
+        <link rel="alternate" href="http://www.ray-ban.com/france/store-locator" hreflang="fr-FR" />
+        <link rel="alternate" href="http://www.ray-ban.com/germany/store-locator" hreflang="de-DE" />
+        <link rel="alternate" href="http://www.ray-ban.com/greece/store-locator" hreflang="el-GR" />
+        <link rel="alternate" href="http://www.ray-ban.com/hongkong/zh/store-locator" hreflang="zh-HK" />
+        <link rel="alternate" href="http://www.ray-ban.com/hongkong/en/store-locator" hreflang="en-HK" />
+        <link rel="alternate" href="store-locator.html" hreflang="hi-IN" />
+        <link rel="alternate" href="http://www.ray-ban.com/italy/store-locator" hreflang="it-IT" />
+        <link rel="alternate" href="http://www.ray-ban.com/korea/store-locator" hreflang="ko-KR" />
+        <link rel="alternate" href="http://www.ray-ban.com/mexico/store-locator" hreflang="es-MX" />
+        <link rel="alternate" href="http://www.ray-ban.com/netherlands/store-locator" hreflang="nl-NL" />
+        <link rel="alternate" href="http://www.ray-ban.com/singapore/store-locator" hreflang="en-SG" />
+        <link rel="alternate" href="http://www.ray-ban.com/southafrica/store-locator" hreflang="en-ZA" />
+        <link rel="alternate" href="http://www.ray-ban.com/spain/store-locator" hreflang="es-ES" />
+        <link rel="alternate" href="http://www.ray-ban.com/sweden/store-locator" hreflang="en-SE" />
+        <link rel="alternate" href="http://www.ray-ban.com/turkey/store-locator" hreflang="tr-TR" />
+        <link rel="alternate" href="http://www.ray-ban.com/uk/store-locator" hreflang="en-GB" />
+        <link rel="alternate" href="http://www.ray-ban.com/usa/store-locator" hreflang="en-US" />
+        <link rel="alternate" href="http://www.ray-ban.com/austria/store-locator" hreflang="de-AT" />
+        <link rel="alternate" href="http://www.ray-ban.com/czechrepublic/store-locator" hreflang="en-CZ" />
+        <link rel="alternate" href="http://www.ray-ban.com/hungary/store-locator" hreflang="en-HU" />
+        <link rel="alternate" href="http://www.ray-ban.com/israel/store-locator" hreflang="en-IL" />
+        <link rel="alternate" href="http://www.ray-ban.com/slovakia/store-locator" hreflang="en-SK" />
+        <link rel="alternate" href="http://www.ray-ban.com/poland/store-locator" hreflang="pl-PL" />
+        <link rel="alternate" href="http://www.ray-ban.com/russia/store-locator" hreflang="ru-RU" />
+        <link rel="alternate" href="http://www.ray-ban.com/belgium/fr/store-locator" hreflang="fr-BE" />
+        <link rel="alternate" href="http://www.ray-ban.com/taiwan/store-locator" hreflang="zh-TW" />
+        <link rel="alternate" href="http://www.ray-ban.com/switzerland/de/store-locator" hreflang="de-CH" />
+        <link rel="alternate" href="http://www.ray-ban.com/switzerland/it/store-locator" hreflang="it-CH" />
+        <link rel="alternate" href="http://www.ray-ban.com/switzerland/fr/store-locator" hreflang="fr-CH" />
+        <link rel="alternate" href="http://www.ray-ban.com/malta/store-locator" hreflang="en-MT" />
+        <link rel="alternate" href="http://www.ray-ban.com/pakistan/store-locator" hreflang="en-PK" />
+        <link rel="alternate" href="http://www.ray-ban.com/belgium/nl/store-locator" hreflang="nl-BE" />
+        <link rel="alternate" href="http://www.ray-ban.com/ukraine/store-locator" hreflang="uk-UA" />
+        <link rel="alternate" href="http://www.ray-ban.com/canada/fr/store-locator" hreflang="fr-CA" />
+        <link rel="alternate" href="http://www.ray-ban.com/switzerland/en/store-locator" hreflang="en-CH" />
+        <link rel="alternate" href="http://www.ray-ban.com/malaysia/store-locator" hreflang="en-MY" />
+        <link rel="alternate" href="http://www.ray-ban.com/indonesia/store-locator" hreflang="en-ID" />
+        <link rel="alternate" href="http://www.ray-ban.com/croatia/store-locator" hreflang="hr-HR" />
+
+   
+    
+
+    <!-- added exception for India for it is pretty much if not all English and hero copy looks awful -->
+
+    
+    
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript">window.jQuery || document.write('<script src="/_repository/_ecma/jquery-1.7.2.min.js"><\/script>');</script>
+
+
+    
+    <script type="text/javascript">
+        var addthis_config = {
+            data_ga_property: 'UA-15393223-2',
+            data_ga_social: true,
+            data_track_addressbar: false
+        };
+    </script>
+    
+    <link type="text/css" href="https://www.ray-ban.com/_repository/_css/2011/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+    <link type="text/css" href="https://www.ray-ban.com/Views/StoreLocator/resources/storeLocator.css" rel="stylesheet" media="all" />
+    <link type="text/css" href="https://www.ray-ban.com/Views/StoreLocator/resources/RB_autocomplete.css" rel="stylesheet" media="all" />
+    <script type="text/javascript" src="https://www.ray-ban.com/_repository/_ecma/2011/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="https://www.ray-ban.com/_repository/_ecma/2011/jquery.jscrollpane.min.js"></script>
+    <script type="text/javascript" src="https://www.ray-ban.com/Views/StoreLocator/resources/js/jquery.RB_autocomplete.js"></script>
+        <script type="text/javascript" src="https://maps.google.com/maps/api/js"></script>
+        <script type="text/javascript" src="https://www.ray-ban.com/Views/StoreLocator/resources/js/GMapsMarkerWithLabel.js"></script>
+
+
+
+
+    
+    <script>        if (typeof window.console === 'undefined') { window.console = {}; window.console.log = window.console.debug = window.console.info = window.console.warn = window.console.error = window.console.time = window.console.timeEnd = function () { }; }</script>
+</head>
+<body class="clearfix" data-culture="hi-IN">
+    <div class="container_12" id="previewmode">
+    </div>
+
+    <script type="text/javascript">
+        var ctryid = '12';
+    </script>
+
+    
+
+<script type="text/javascript">
+    var t_pagename = "RB_IN:Common:StoreLocator:LandingPage";
+    var t_country = "IN";
+    var t_channel = "Common";
+    var t_subsection = "StoreLocator";    
+    var t_lang = "hi";    
+    var t_currency = "";
+    var t_userType = "Guest";
+    var t_Page_Platform = "DMP no-ecommerce (desktop)";
+    if (typeof customCookieFunctions !== 'undefined' && customCookieFunctions.getCookie("WC_ACTIVEPOINTER") != null && customCookieFunctions.getCookie("WC_USERACTIVITY_-1002") == null) {
+        t_userType = "Registered";
+    }
+        
+    /* clone t_ variable into utag_data object */
+    var utag_data = utag_data || {};
+    for (var prop in window) {
+        !!prop.match(/^t_/) && (utag_data[prop.slice(2)] = window[prop]);
+    }
+    
+    // Utag library (async) 
+    (function (a, b, c, d, e) {
+        e = location.host.match(/localhost/)?'acceptance.ray-ban.com':location.host;
+        a = (location.host.match(/^www.ray|^m.ray|^china.ray|^japan.ray/)) ? ('prod') : ('qa');
+        a = '//'+ e + '/thirdparty/utag/luxottica/ray-ban/' + a + '/utag.js'
+        b = document; c = 'script'; d = b.createElement(c); d.src = a; d.type = 'text/java' + c; d.async = true;
+        a = b.getElementsByTagName(c)[0];
+        a.parentNode.insertBefore(d, a);
+    })();
+</script>
+<input type="hidden" value="StoreLocator" id="producttype" />
+
+    
+
+
+
+
+
+<header class="dmp-header">
+    <div class="dmp-hd-container">
+        <div class="dmp-twelve dmp-columns dmp-alpha dmp-omega dmp-hd-menu">
+            <div class="dmp-title_logo">
+                <a href="https://www.ray-ban.com/india">
+                    <img src="https://www.ray-ban.com/_repository/_gp/_images/new_ray-ban_logo.png" alt="Ray-Ban ®" title="Ray-Ban ®" />
+                </a>
+            </div>
+            <div class="boxLeft_wrapper">
+                    <div id="utility_container">
+                        
+<div id="utility_menu" class="container_12">
+        <div class="wcs-shipping-bar">
+            <div class="wcs-container">
+                <div id=wcs-shipping-container>
+                    <div id=wcs-shipping-van></div>
+                    <div style="display:inline-block">
+                        <span class=wcs-shipping-bar-text>
+                            <a class=wcs-color-fff href="http://india.ray-ban.com?header">Go to Online Shop &nbsp; ></a>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    <div class="plusone2" id="plusone2" data-size="small" data-annotation="none" style="float:right;padding: 3px 10px 0 5px; height:15px; width:24px; clear: both; position: static !important;"><g:plusone size="small" count="false"></g:plusone></div>
+    <ul>
+        <li>
+        </li>
+        <li>
+        </li>
+        <li>
+        </li>
+        <li>
+<a href="store-locator.html">Store Locator</a>        </li>
+        <li>
+        </li>
+        <li>
+        </li>
+        <li>
+        </li>
+    </ul>
+</div>
+
+                    </div>
+
+                <div class="menu_wrapper">
+                           
+       
+    <div class="dmp-primary dmp_on">
+        <a href="https://www.ray-ban.com/india/products/sun">Sunglasses<span class="dmp-down_arrow"></span></a>
+        
+                    
+        
+        <div class="dmp-drop_panel dmp-sunglass india-sun-menu dmp-top106">
+
+        
+            <div class="dmp-container">
+                        <h4>
+Most Popular        </h4>
+                <a href="http://india.ray-ban.com/sunglasses-store.html?sgplp/&amp;cid=RB26_DMP-India_SunglassesMenu_ViewAllSunglasses" class="cta-viewall sun">
+                    <p class="dmp-half-top"><strong>View All Sunglasses</strong></p>
+                </a>
+                <a href="http://india.ray-ban.com/optics-store.html?sgplp/cid=RB26_DMP-India_OpticsMenu_ViewAllEyeglasses" class="cta-viewall ops">
+                    <p class="dmp-half-top"><strong>View All Eyeglasses</strong></p>
+                </a>
+        <div class="dmp-add-top dmp-add-bottom">
+                <div class="dmp-182 dmp-columns dmp-alpha">
+                    <a href="http://india.ray-ban.com/sunglasses-store/aviator-main.html/?cid=RB26_DMP-India_SunglassesMenu_Aviator"> 
+                        <img alt="" src="https://www.ray-ban.com/_repository/_static/_images/_menu/Sun/aviator.jpg" />                                
+                        <p class="dmp-half-top"><strong>Aviator&#0153;</strong></p>
+                    </a>                           
+                </div>
+                <div class="dmp-182 dmp-columns dmp-alpha">
+                    <a href="http://india.ray-ban.com/sunglasses-store/wayfarer-main.html/?cid=RB26_DMP-India_SunglassesMenu_Wayfarer"> 
+                        <img alt="" src="https://www.ray-ban.com/_repository/_static/_images/_menu/Sun/wayfarer.jpg" />                                
+                        <p class="dmp-half-top"><strong>Wayfarer</strong></p>
+                    </a>                           
+                </div>
+                <div class="dmp-182 dmp-columns dmp-alpha">
+                    <a href="http://india.ray-ban.com/sunglasses-store/clubmaster-main.html/?cid=RB26_DMP-India_SunglassesMenu_Clubmaster"> 
+                        <img alt="" src="https://www.ray-ban.com/_repository/_static/_images/_menu/Sun/clubmaster.jpg" />                                
+                        <p class="dmp-half-top"><strong>Clubmaster</strong></p>
+                    </a>                           
+                </div>
+                <div class="dmp-182 dmp-columns dmp-alpha">
+                    <a href="http://india.ray-ban.com/sunglasses-store/sunglasses-round.html/?cid=RB26_DMP-India_SunglassesMenu_Round"> 
+                        <img alt="" src="https://www.ray-ban.com/_repository/_static/_images/_menu/Sun/round.jpg" />                                
+                        <p class="dmp-half-top"><strong>Round</strong></p>
+                    </a>                           
+                </div>
+                <div class="dmp-182 dmp-columns dmp-alpha">
+                    <a href="http://india.ray-ban.com/sunglasses-store/justin-main.html/?cid=RB26_DMP-India_SunglassesMenu_Justin"> 
+                        <img alt="" src="https://www.ray-ban.com/_repository/_static/_images/_menu/Sun/justin.jpg" />                                
+                        <p class="dmp-half-top"><strong>Justin</strong></p>
+                    </a>                           
+                </div>
+                <div class="dmp-182 dmp-columns dmp-alpha">
+                    <a href="http://india.ray-ban.com/sunglasses-store/erika-main.html/?cid=RB26_DMP-India_SunglassesMenu_Erika"> 
+                        <img alt="" src="https://www.ray-ban.com/_repository/_static/_images/_menu/Sun/erika.jpg" />                                
+                        <p class="dmp-half-top"><strong>Erika</strong></p>
+                    </a>                           
+                </div>
+        </div>
+
+            </div> 
+                <div class="dmp-wide-wrap dmp-hr"></div>
+    <div class='dmp-container dmp-marTop-25'>
+
+    
+            <div class="dmp-add-top dmp-add-bottom dmp-alpha">
+                    <div class="dmp-columns dmp-182 subItem first-column">
+                                    <p class="dmp-half-top">
+                                        <strong><a href="">Popular links</a></strong>
+                                    </p>
+                                    <p class="dmp-half-top">
+                                        <strong><a href="http://india.ray-ban.com/sunglasses-store/polarized-main.html">Polarized</a></strong>
+                                    </p>
+                                    <p class="dmp-half-top">
+                                        <strong><a href="http://india.ray-ban.com/sunglasses-store/new-arrivals.html/?cid=RB26_DMP-India_SunglassesMenu_NewArrivals">New Arrivals</a></strong>
+                                    </p>
+                                    <p class="dmp-half-top">
+                                        <strong><a href="http://india.ray-ban.com/sunglasses-store/flash-lenses.html/?cid=RB26_DMP-India_SunglassesMenu_FlashLenses">Flash Lenses</a></strong>
+                                    </p>
+                                    <p class="dmp-half-top">
+                                        <strong><a href="http://india.ray-ban.com/sunglasses-store/top-rated.html/?cid=RB26_DMP-India_SunglassesMenu_TopRated">Top Rated</a></strong>
+                                    </p>
+                    </div>
+                    <div class="dmp-columns dmp-182 subItem second-column">
+                                    <p class="dmp-half-top">
+                                        <strong><a href="">SHOP BY</a></strong>
+                                    </p>
+                                    <p class="dmp-half-top">
+                                        <strong><a href="http://india.ray-ban.com/sunglasses-store/men.html/?cid=RB26_DMP-India_SunglassesArea_Men">Men</a></strong>
+                                    </p>
+                                    <p class="dmp-half-top">
+                                        <strong><a href="http://india.ray-ban.com/sunglasses-store/women.html/?cid=RB26_DMP-India_SunglassesMenu_Women">Women</a></strong>
+                                    </p>
+                                    <p class="dmp-half-top">
+                                        <strong><a href="http://india.ray-ban.com/sunglasses-store/junior.html/?cid=RB26_DMP-India_SunglassesMenu_Junior">Junior</a></strong>
+                                    </p>
+                                    <p class="dmp-half-top">
+                                        <strong><a href="http://india.ray-ban.com/sunglasses-store/icons-main.html">Icons</a></strong>
+                                    </p>
+                                    <p class="dmp-half-top">
+                                        <strong><a href="http://india.ray-ban.com/sunglasses-store/tech.html/?cid=RB26_DMP-India_SunglassesMenu_Tech">Tech</a></strong>
+                                    </p>
+                                    <p class="dmp-half-top">
+                                        <strong><a href="http://india.ray-ban.com/sunglasses-store/active.html/?cid=RB26_DMP-India_SunglassesMenu_Active">Active</a></strong>
+                                    </p>
+                                    <p class="dmp-half-top">
+                                        <strong><a href="http://india.ray-ban.com/sunglasses-store/highstreet.html/?cid=RB26_DMP-India_SunglassesMenu_Highstreet">Highstreet</a></strong>
+                                    </p>
+                                    <p class="dmp-half-top">
+                                        <strong><a href="http://india.ray-ban.com/sunglasses-store/pilot.html/?cid=RB26_DMP-India_SunglassesMenu_Pilot">Pilot</a></strong>
+                                    </p>
+                                    <p class="dmp-half-top">
+                                        <strong><a href="http://india.ray-ban.com/sunglasses-store/square.html/?cid=RB26_DMP-India_SunglassesMenu_Square">Square</a></strong>
+                                    </p>
+                                    <p class="dmp-half-top">
+                                        <strong><a href="http://india.ray-ban.com/sunglasses-store/rectangle.html/?cid=RB26_DMP-India_SunglassesMenu_Rectangle">Rectangle</a></strong>
+                                    </p>
+                                    <p class="dmp-half-top">
+                                        <strong><a href="http://india.ray-ban.com/sunglasses-store/round-shape.html/?cid=RB26_DMP-India_SunglassesMenu_Round">Round</a></strong>
+                                    </p>
+                    </div>
+                    <div class="dmp-columns dmp-182 subItem third-column">
+                                    <p class="dmp-half-top">
+                                        <strong><a href="http://india.ray-ban.com/sunglasses-store/"></a></strong>
+                                    </p>
+                    </div>
+            </div>
+        
+    </div>
+    <span class="dmp-close-btn"></span>
+        </div>
+    </div>
+    <div class="dmp-primary dmp_on">
+        <a href="https://www.ray-ban.com/india/products/optics">Optics<span class="dmp-down_arrow"></span></a>
+        
+                    
+        
+        <div class="dmp-drop_panel dmp-optics india-optic-menu dmp-top106">
+
+        
+            <div class="dmp-container">
+                        <h4>
+Most Popular        </h4>
+                <a href="http://india.ray-ban.com/sunglasses-store.html?sgplp/&amp;cid=RB26_DMP-India_SunglassesMenu_ViewAllSunglasses" class="cta-viewall sun">
+                    <p class="dmp-half-top"><strong>View All Sunglasses</strong></p>
+                </a>
+                <a href="http://india.ray-ban.com/optics-store.html?sgplp/cid=RB26_DMP-India_OpticsMenu_ViewAllEyeglasses" class="cta-viewall ops">
+                    <p class="dmp-half-top"><strong>View All Eyeglasses</strong></p>
+                </a>
+        <div class="dmp-add-top dmp-add-bottom">
+                <div class="dmp-182 dmp-columns dmp-alpha">
+                    <a href="http://india.ray-ban.com/clubmaster-optics.html/?cid=RB26_DMP-India_OpticsMenu_RB5154"> 
+                        <img alt="" src="https://www.ray-ban.com/_repository/_static/_images/_menu/Optical/RB5154.jpg" />                                
+                        <p class="dmp-half-top"><strong>The Clubmaster RB5154</strong></p>
+                    </a>                           
+                </div>
+                <div class="dmp-182 dmp-columns dmp-alpha">
+                    <a href="http://india.ray-ban.com/rb5228.html/?cid=RB26_DMP-India_OpticsMenu_RB5228"> 
+                        <img alt="" src="https://www.ray-ban.com/_repository/_static/_images/_menu/Optical/RB5228.jpg" />                                
+                        <p class="dmp-half-top"><strong>The Timeless RB5228</strong></p>
+                    </a>                           
+                </div>
+                <div class="dmp-182 dmp-columns dmp-alpha">
+                    <a href="http://india.ray-ban.com/new-wayfarer-optics.html/?cid=RB26_DMP-India_OpticsMenu_RB5184"> 
+                        <img alt="" src="https://www.ray-ban.com/_repository/_static/_images/_menu/Optical/RB5184.jpg" />                                
+                        <p class="dmp-half-top"><strong>The New Wayfarer RB5184</strong></p>
+                    </a>                           
+                </div>
+                <div class="dmp-182 dmp-columns dmp-alpha">
+                    <a href="http://india.ray-ban.com/rb2180v.html/?cid=RB26_DMP-India_OpticsMenu_RB2180V"> 
+                        <img alt="" src="https://www.ray-ban.com/_repository/_static/_images/_menu/Optical/RB2180V.jpg" />                                
+                        <p class="dmp-half-top"><strong>The Round RB2180V</strong></p>
+                    </a>                           
+                </div>
+                <div class="dmp-182 dmp-columns dmp-alpha">
+                    <a href="http://india.ray-ban.com/rb5255.html/?cid=RB26_DMP-India_OpticsMenu_RB5255"> 
+                        <img alt="" src="https://www.ray-ban.com/_repository/_static/_images/_menu/Optical/RB5255.jpg" />                                
+                        <p class="dmp-half-top"><strong>For Her RB5255</strong></p>
+                    </a>                           
+                </div>
+                <div class="dmp-182 dmp-columns dmp-alpha">
+                    <a href="http://india.ray-ban.com/rb7046-9577.html/?cid=RB26_DMP-India_OpticsMenu_RB7046"> 
+                        <img alt="" src="https://www.ray-ban.com/_repository/_static/_images/_menu/Optical/RB7046.jpg" />                                
+                        <p class="dmp-half-top"><strong>Erika RB7046</strong></p>
+                    </a>                           
+                </div>
+        </div>
+
+            </div> 
+                <div class="dmp-wide-wrap dmp-hr"></div>
+    <div class='dmp-container dmp-marTop-25'>
+
+    
+            <div class="dmp-add-top dmp-add-bottom dmp-alpha">
+                    <div class="dmp-columns dmp-182 subItem first-column">
+                                    <p class="dmp-half-top">
+                                        <strong><a href="">Popular links</a></strong>
+                                    </p>
+                                    <p class="dmp-half-top">
+                                        <strong><a href="http://india.ray-ban.com/optics-store/top-rated.html/?cid=RB26_DMP-India_OpticsMenu_TopRated"> Best Sellers </a></strong>
+                                    </p>
+                                    <p class="dmp-half-top">
+                                        <strong><a href="http://india.ray-ban.com/optics-store/new-style.html/?cid=RB26_DMP-India_OpticsMenu_NewStyle">New Styles</a></strong>
+                                    </p>
+                    </div>
+                    <div class="dmp-columns dmp-182 subItem second-column">
+                                    <p class="dmp-half-top">
+                                        <strong><a href="">SHOP BY</a></strong>
+                                    </p>
+                                    <p class="dmp-half-top">
+                                        <strong><a href="http://india.ray-ban.com/optics-store/men-s-optics.html/?cid=RB26_DMP-India_OpticsMenu_Men">Men</a></strong>
+                                    </p>
+                                    <p class="dmp-half-top">
+                                        <strong><a href="http://india.ray-ban.com/optics-store/women-s-optics.html/?cid=RB26_DMP-India_OpticsMenu_Women">Women</a></strong>
+                                    </p>
+                                    <p class="dmp-half-top">
+                                        <strong><a href="http://india.ray-ban.com/optics-store/junior-optics.html/?cid=RB26_DMP-India_OpticsMenu_Junior">Junior</a></strong>
+                                    </p>
+                                    <p class="dmp-half-top">
+                                        <strong><a href="http://india.ray-ban.com/optics-store/pilot-shape.html/?cid=RB26_DMP-India_OpticsMenu_Pilot">Pilot</a></strong>
+                                    </p>
+                                    <p class="dmp-half-top">
+                                        <strong><a href="http://india.ray-ban.com/optics-store/square-shape.html/?cid=RB26_DMP-India_OpticsMenu_Square">Square</a></strong>
+                                    </p>
+                                    <p class="dmp-half-top">
+                                        <strong><a href="http://india.ray-ban.com/optics-store/rectangle-shape.html/?cid=RB26_DMP-India_OpticsMenu_Rectangle">Rectangle</a></strong>
+                                    </p>
+                                    <p class="dmp-half-top">
+                                        <strong><a href="http://india.ray-ban.com/optics-store/round-shape.html/?cid=RB26_DMP-India_OpticsMenu_Round">Round</a></strong>
+                                    </p>
+                                    <p class="dmp-half-top">
+                                        <strong><a href="http://india.ray-ban.com/optics-store/full-rim.html/?cid=RB26_DMP-India_OpticsMenu_FullRim">Full Rim</a></strong>
+                                    </p>
+                                    <p class="dmp-half-top">
+                                        <strong><a href="http://india.ray-ban.com/optics-store/semi-rim.html/?cid=RB26_DMP-India_OpticsMenu_SemiRim">Semi Rim</a></strong>
+                                    </p>
+                                    <p class="dmp-half-top">
+                                        <strong><a href="http://india.ray-ban.com/optics-store/rimless.html/?cid=RB26_DMP-India_OpticsMenu_Rimless">Rimless</a></strong>
+                                    </p>
+                                    <p class="dmp-half-top">
+                                        <strong><a href="http://india.ray-ban.com/optics-store/icons.html/?cid=RB26_DMP-India_OpticsMenu_Icons">Icons</a></strong>
+                                    </p>
+                                    <p class="dmp-half-top">
+                                        <strong><a href="http://india.ray-ban.com/optics-store/icons.html/?cid=RB26_DMP-India_OpticsMenu_Tech">Tech</a></strong>
+                                    </p>
+                                    <p class="dmp-half-top">
+                                        <strong><a href="http://india.ray-ban.com/optics-store/active.html/?cid=RB26_DMP-India_OpticsMenu_Active">Active</a></strong>
+                                    </p>
+                                    <p class="dmp-half-top">
+                                        <strong><a href="http://india.ray-ban.com/optics-store/highstreet.html/?cid=RB26_DMP-India_OpticsMenu_Highstreet">Highstreet</a></strong>
+                                    </p>
+                    </div>
+                    <div class="dmp-columns dmp-182 subItem third-column">
+                                    <p class="dmp-half-top">
+                                        <strong><a href="http://india.ray-ban.com/optics-store/"></a></strong>
+                                    </p>
+                    </div>
+            </div>
+        
+    </div>
+    <span class="dmp-close-btn"></span>
+        </div>
+    </div>
+    <div class="dmp-primary dmp_on">
+        <a href="https://www.ray-ban.com/india/lenses">LENSES<span class="dmp-down_arrow"></span></a>
+        
+                    
+        
+        <div class="dmp-drop_panel dmp-lenses dmp-top106">
+
+        
+            <div class="dmp-container">
+                        <h4>
+Lens Categories        </h4>
+                <a href="http://india.ray-ban.com/sunglasses-store.html?sgplp/&amp;cid=RB26_DMP-India_SunglassesMenu_ViewAllSunglasses" class="cta-viewall sun">
+                    <p class="dmp-half-top"><strong>View All Sunglasses</strong></p>
+                </a>
+                <a href="http://india.ray-ban.com/optics-store.html?sgplp/cid=RB26_DMP-India_OpticsMenu_ViewAllEyeglasses" class="cta-viewall ops">
+                    <p class="dmp-half-top"><strong>View All Eyeglasses</strong></p>
+                </a>
+        <div class="dmp-add-top dmp-add-bottom">
+                <div class="dmp-182 dmp-columns dmp-alpha">
+                    <a href="https://www.ray-ban.com/india/lenses#classic"> 
+                        <img alt="" src="https://www.ray-ban.com/_repository/_gui/2012/Lenses/04.jpg" />                                
+                        <p class="dmp-half-top"><strong>Classic</strong></p>
+                    </a>                           
+                </div>
+                <div class="dmp-182 dmp-columns dmp-alpha">
+                    <a href="https://www.ray-ban.com/india/lenses#gradient"> 
+                        <img alt="" src="https://www.ray-ban.com/_repository/_gui/2012/Lenses/02.jpg" />                                
+                        <p class="dmp-half-top"><strong>Gradient</strong></p>
+                    </a>                           
+                </div>
+                <div class="dmp-182 dmp-columns dmp-alpha">
+                    <a href="https://www.ray-ban.com/india/lenses#special"> 
+                        <img alt="" src="https://www.ray-ban.com/_repository/_gui/2012/Lenses/03.jpg" />                                
+                        <p class="dmp-half-top"><strong>Special</strong></p>
+                    </a>                           
+                </div>
+                <div class="dmp-182 dmp-columns dmp-alpha">
+                    <a href="https://www.ray-ban.com/india/lenses#polarized"> 
+                        <img alt="" src="https://www.ray-ban.com/_repository/_gui/2012/Lenses/01.jpg" />                                
+                        <p class="dmp-half-top"><strong>Polarized</strong></p>
+                    </a>                           
+                </div>
+        </div>
+
+            </div> 
+                <div class="dmp-wide-wrap dmp-hr"></div>
+    <div class='dmp-container dmp-marTop-25'>
+
+        <h4>
+Lens Ranges        </h4>       
+    
+            <div class="dmp-add-top dmp-add-bottom dmp-alpha">
+                    <div class="dmp-columns ">
+									    <a href="https://www.ray-ban.com/india/lenses#classic">
+										    <img alt="" src="https://www.ray-ban.com/_repository/_static/_dmp/_images/img-lenses-g15.jpg" />
+										    
+											    <p><strong>Green Lenses G15</strong></p>
+											    <p></p>
+										    
+									    </a>
+                    </div>
+                    <div class="dmp-columns ">
+									    <a href="https://www.ray-ban.com/india/lenses#classic_b15">
+										    <img alt="" src="https://www.ray-ban.com/_repository/_static/_dmp/_images/img-lenses-b15.jpg" />
+										    
+											    <p><strong>Brown Lenses B15</strong></p>
+											    <p></p>
+										    
+									    </a>
+                    </div>
+                    <div class="dmp-columns ">
+									    <a href="https://www.ray-ban.com/india/lenses#special">
+										    <img alt="" src="https://www.ray-ban.com/_repository/_static/_dmp/_images/img-lenses-mirror.jpg" />
+										    
+											    <p><strong>Mirror</strong></p>
+											    <p></p>
+										    
+									    </a>
+                    </div>
+                    <div class="dmp-columns ">
+									    <a href="https://www.ray-ban.com/india/lenses#legends">
+										    <img alt="" src="https://www.ray-ban.com/_repository/_static/_dmp/_images/img-lenses-legends.jpg" />
+										    
+											    <p><strong>Legends</strong></p>
+											    <p></p>
+										    
+									    </a>
+                    </div>
+            </div>
+        
+    </div>
+    <span class="dmp-close-btn"></span>
+        </div>
+    </div>
+    <div class="dmp-primary dmp_on">
+        <a href="https://www.ray-ban.com/india/the-lab">THE LAB<span class="dmp-down_arrow"></span></a>
+        
+                    
+        
+        <div class="dmp-drop_panel dmp-lab dmp-top106">
+
+        
+            <div class="dmp-container">
+                        <h4>
+FRAME INNOVATION        </h4>
+                <a href="http://india.ray-ban.com/sunglasses-store.html?sgplp/&amp;cid=RB26_DMP-India_SunglassesMenu_ViewAllSunglasses" class="cta-viewall sun">
+                    <p class="dmp-half-top"><strong>View All Sunglasses</strong></p>
+                </a>
+                <a href="http://india.ray-ban.com/optics-store.html?sgplp/cid=RB26_DMP-India_OpticsMenu_ViewAllEyeglasses" class="cta-viewall ops">
+                    <p class="dmp-half-top"><strong>View All Eyeglasses</strong></p>
+                </a>
+        <div class="dmp-add-top dmp-add-bottom">
+                <div class="dmp-182 dmp-columns dmp-alpha">
+                    <a href="https://www.ray-ban.com/india/the-lab#memo-ray"> 
+                        <img alt="" src="https://www.ray-ban.com/_repository/_static/_dmp/_gui/memoRayMenu.jpg" />                                
+                        <p class="dmp-half-top"><strong>Memo ray</strong></p>
+                    </a>                           
+                </div>
+                <div class="dmp-182 dmp-columns dmp-alpha">
+                    <a href="https://www.ray-ban.com/india/the-lab#carbon"> 
+                        <img alt="" src="https://www.ray-ban.com/_repository/_static/_dmp/_gui/carbonMenu.jpg" />                                
+                        <p class="dmp-half-top"><strong>Carbon Fibre</strong></p>
+                    </a>                           
+                </div>
+                <div class="dmp-182 dmp-columns dmp-alpha">
+                    <a href="https://www.ray-ban.com/india/the-lab#light-ray"> 
+                        <img alt="" src="https://www.ray-ban.com/_repository/_static/_dmp/_gui/light-rayMenu.jpg" />                                
+                        <p class="dmp-half-top"><strong>light-ray</strong></p>
+                    </a>                           
+                </div>
+                <div class="dmp-182 dmp-columns dmp-alpha">
+                    <a href="https://www.ray-ban.com/india/the-lab#lite-force"> 
+                        <img alt="" src="https://www.ray-ban.com/_repository/_static/_dmp/_gui/liteforceMenu.jpg" />                                
+                        <p class="dmp-half-top"><strong>Liteforce</strong></p>
+                    </a>                           
+                </div>
+                <div class="dmp-182 dmp-columns dmp-alpha">
+                    <a href="https://www.ray-ban.com/india/the-lab#titanium"> 
+                        <img alt="" src="https://www.ray-ban.com/_repository/_static/_dmp/_gui/titaniumMenu.jpg" />                                
+                        <p class="dmp-half-top"><strong>Titanium</strong></p>
+                    </a>                           
+                </div>
+        </div>
+
+            </div> 
+                <div class="dmp-wide-wrap dmp-hr"></div>
+    <div class='dmp-container dmp-marTop-25'>
+
+        <h4>
+LENS PERFORMANCE        </h4>       
+    
+            <div class="dmp-add-top dmp-add-bottom dmp-alpha">
+                    <div class="dmp-columns ">
+									    <a href="https://www.ray-ban.com/india/the-lab#clarity">
+										    <img alt="" src="https://www.ray-ban.com/_repository/_static/_dmp/_gui/clarityMenu.jpg" />
+										    
+											    <p><strong>Clarity & Comfort</strong></p>
+											    <p></p>
+										    
+									    </a>
+                    </div>
+                    <div class="dmp-columns ">
+									    <a href="https://www.ray-ban.com/india/the-lab#eye">
+										    <img alt="" src="https://www.ray-ban.com/_repository/_static/_dmp/_gui/eyeMenu.jpg" />
+										    
+											    <p><strong>Eye Protection</strong></p>
+											    <p></p>
+										    
+									    </a>
+                    </div>
+                    <div class="dmp-columns dmp-omega">
+									    <a href="https://www.ray-ban.com/india/the-lab#durability">
+										    <img alt="" src="https://www.ray-ban.com/_repository/_static/_dmp/_gui/durabilityMenu.jpg" />
+										    
+											    <p><strong>Durability</strong></p>
+											    <p></p>
+										    
+									    </a>
+                    </div>
+                    <div class="dmp-columns dmp-omega">
+									    <a href="https://www.ray-ban.com/india/the-lab#polarized">
+										    <img alt="" src="https://www.ray-ban.com/_repository/_static/_dmp/_gui/polarizedMenu.jpg" />
+										    
+											    <p><strong>Polarized Technology</strong></p>
+											    <p></p>
+										    
+									    </a>
+                    </div>
+            </div>
+        
+    </div>
+    <span class="dmp-close-btn"></span>
+        </div>
+    </div>
+    <div class="dmp-primary dmp_on">
+        <a href="https://www.ray-ban.com/india/stories">STORIES<span class="dmp-down_arrow"></span></a>
+        
+                    
+        
+        <div class="dmp-drop_panel dmp-hub dmp-top106">
+
+        
+            <div class="dmp-container">
+                        <h4>
+        </h4>
+                <a href="http://india.ray-ban.com/sunglasses-store.html?sgplp/&amp;cid=RB26_DMP-India_SunglassesMenu_ViewAllSunglasses" class="cta-viewall sun">
+                    <p class="dmp-half-top"><strong>View All Sunglasses</strong></p>
+                </a>
+                <a href="http://india.ray-ban.com/optics-store.html?sgplp/cid=RB26_DMP-India_OpticsMenu_ViewAllEyeglasses" class="cta-viewall ops">
+                    <p class="dmp-half-top"><strong>View All Eyeglasses</strong></p>
+                </a>
+        <div class="dmp-add-top dmp-add-bottom">
+                <div class="dmp-182 dmp-columns dmp-alpha">
+                    <a href="https://www.ray-ban.com/india/campaigns/advertising"> 
+                        <img alt="" src="https://www.ray-ban.com/_repository/_static/_dmp/_images/img-nhhCampaigns.jpg" />                                
+                        <p class="dmp-half-top"><strong>CAMPAIGNS</strong></p>
+                            <p> </p>
+                    </a>                           
+                </div>
+                <div class="dmp-182 dmp-columns dmp-alpha">
+                    <a href="https://www.ray-ban.com/india/apps"> 
+                        <img alt="" src="https://www.ray-ban.com/_repository/_static/_dmp/_images/img-nhhApps.jpg" />                                
+                        <p class="dmp-half-top"><strong>APPS</strong></p>
+                            <p> </p>
+                    </a>                           
+                </div>
+                <div class="dmp-182 dmp-columns dmp-alpha">
+                    <a href="https://www.ray-ban.com/india/films"> 
+                        <img alt="" src="https://www.ray-ban.com/_repository/_static/_dmp/_images/img-nhhFilms.jpg" />                                
+                        <p class="dmp-half-top"><strong>FILMS</strong></p>
+                    </a>                           
+                </div>
+                <div class="dmp-182 dmp-columns dmp-alpha">
+                    <a href="https://www.ray-ban.com/india/noise"> 
+                        <img alt="" src="https://www.ray-ban.com/_repository/_static/_dmp/_images/img-nhhNoise.jpg" />                                
+                        <p class="dmp-half-top"><strong>NOISE</strong></p>
+                    </a>                           
+                </div>
+                <div class="dmp-182 dmp-columns dmp-alpha">
+                    <a href="https://www.ray-ban.com/india/blog"> 
+                        <img alt="" src="https://www.ray-ban.com/_repository/_static/_dmp/_images/img-nhhBlog.jpg" />                                
+                        <p class="dmp-half-top"><strong>BLOG</strong></p>
+                    </a>                           
+                </div>
+        </div>
+
+            </div> 
+                <div class="dmp-wide-wrap dmp-hr"></div>
+    <div class='dmp-four dmp-columns dmp-omega'>
+
+    
+                                    <div class="">
+									    <a href="https://www.ray-ban.com/india/worldwide-wonderland">
+										    <img width="69" height="46" alt="" src="https://www.ray-ban.com/_repository/_static/_dmp/_images/Ray-Ban-reflection-OpenYourHeart.jpg" />
+										    <div class="margin-top-8" style="text-align:left;">
+											    <p style="margin:0"><strong>DISCOVER MORE</strong></p>
+											    <p style="margin:0"></p>
+										    </div>
+									    </a>
+								    </div>            
+        
+    </div>
+    <span class="dmp-close-btn"></span>
+        </div>
+    </div>
+    <div class="dmp-primary ">
+        <a href="https://www.ray-ban.com/india/virtual-mirror">Virtual Mirror<span class="dmp-down_arrow"></span></a>
+        
+                    
+        
+        <div class="dmp-drop_panel  dmp-top106">
+
+        
+            <div class="dmp-container">
+                <div class="dmp-add-top">
+                    
+                        <div class='dmp-four dmp-columns dmp-omega'>
+
+    
+        
+    </div>
+    <span class="dmp-close-btn"></span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+ 
+           
+
+                    <div class="dmp-drop_panel_container dmp-top106" style="z-index:999;"></div>
+                </div>
+                <div id="searchBar"><span></span>Search</div>
+            </div>
+
+
+            
+        </div>
+
+    </div>
+
+</header>
+    <div id="newSlider"></div>
+    
+
+<div id="searchToolBar">
+    <div class="arrow"></div>
+    <div class="inputBar">
+        <input type="text" name="searchTerm" id="searchTerm" onkeyup="search(this)" placeholder="Search the Ray-Ban site" />
+        <input type="submit" value=" " id="searchTermButton" />
+    </div>
+    <div id="sideResults">
+        <a id="viewAll">View All Search Results</a>
+        <div class="searchContent"></div>
+    </div>
+</div>	
+<div id="searchButton">
+    <span></span>
+    <div class="feedback">Search<div class="arr"></div></div>
+</div>
+<div id="sbOverlay"></div>
+
+<script type="text/javascript"> 
+    function search(searchTerm) {
+    
+        var uri = ('/india/products/search?pageSize=2&webResults=True&view=QuickSearchList' + '&text=' + searchTerm.value); 
+            if(searchTerm.value.length > 2)
+            {
+                $.ajax({
+                        type: 'GET',
+                        url: uri,
+                        async: true,
+                    }).success(function (html) {
+                        $htmlContent = html;
+                        if($htmlContent != $('.searchContent').html()) {
+                            if($.trim(html) && html.match(/wrapper/g)) {
+                                $('.searchContent').html(html);
+                                $('#sideResults').stop(true,true).fadeIn();
+                            }
+                            else {
+                                $('#sideResults').fadeOut(); 
+                            }
+                        }
+                    })
+                    .error(function (ex) {
+                    //    alert('Failed to retrieve products search results.' + ex.data);
+                });
+
+            } else { $('#sideResults').fadeOut(); $('.searchContent').html(''); }
+    }
+
+    $('#searchTermButton, #viewAll').on('click', function () {
+        if($('#searchTerm').val().length > 2) gotToSearchPage();
+    }); 
+
+    $('#searchTerm').keypress(function (e) {
+        if (e.which == 13 && $('#searchTerm').val().length > 2) {
+            gotToSearchPage();
+        }
+    });
+    
+    function gotToSearchPage(){       
+        var url = ('/india/products/search?webResults=True' + '&text=' + searchTerm.value);   
+        window.location = url;
+    }
+</script>
+    <div class="container_12">
+        <div class="whole_container clearfix">
+            <div id="maincontent" class="grid_12 store-locator">
+                
+
+
+
+
+
+
+
+<div class="grid_12 bg">
+    <div id="sl" class="default certReseller" data-ctry="india">
+        <div class="row sectionHeader clearfix">
+            <h1>Locate your nearest Ray-Ban Certified Reseller</h1>
+            <h1 class="filterOn"></h1>
+                <p class="subTitle">Enter your search request below and submit for a listing of retailers' locations near you.</p>
+            <div class="errContainer">
+                <span id="filterError">A filter is required </span>
+            </div>
+                <a href="http://india.ray-ban.com?header">
+                    <div class="IN_shipping-container">
+                        <div class="IN_shipping-van"></div>
+                        <div class="IN_shipping-bar-text">
+                            Go to Online Shop &nbsp; &gt;
+                        </div>
+                    </div>
+                </a>
+            
+        </div>
+            <div class="row sectionProximity clearfix">
+                <p class="subTitle">Search around your location</p>
+                <div class="searchContainer">
+                    <div class="search">
+                        <input type="button" class="bttSubmit" id="bttnSearchNearby" />
+                    </div>
+                </div>
+            </div>
+        <div class="row sectionForm clearfix">
+<form action="/india/store-locator/LoadStores" data-ajax="true" data-ajax-loading="#ajxloader" data-ajax-mode="replace" data-ajax-update="#dvCont1" id="FormStoreLocator" method="post">                <p class="subTitle">Otherwise search by</p>
+                <div class="fieldContainer">
+                        <div class="inputField">
+                            <div class="inputLabel">
+                                <label>
+                                    
+                                    City:
+                                </label>
+                            </div>
+                            <input class="field validate" type="text" value="" name="form_city" id="form_city" data-ac-limit="15" data-ac-delay="250" data-ac-url="/_repository/_httphandlers/storelocator.ashx?act=400&ctryid=12&text-to-search={}&Maxrows=100" autocomplete="off" />
+                        </div>
+                        <div class="inputField data">
+                            <div class="inputLabel">
+                                <label>
+                                            <label class="andor">AND/OR</label>
+
+                                    Zip Code:
+                                </label>
+                            </div>
+                            <input class="field validate" type="text" value="" name="form_CP" id="form_CP" />
+                        </div>
+                        <input type="text" value="" name="MyLat" id="MyLat" style="display: none;" />
+                            <input type="text" value="" name="MyLong" id="MyLong" style="display: none;" />
+                            <input class="trueCheckBox" type="checkbox" name="form_disable_proximity" id="form_disable_proximity" value="true" />
+                            <input class="trueCheckBox" type="text" value="premium" name="form_featured" id="form_featured" />
+                                <input class="field" type="hidden" value="" name="form_storeCode" id="form_storeCode" />
+
+                </div>
+                    <!-- end fieldContainer -->
+                    <div class="searchContainer">
+                        <div class="search">
+                            <input type="button" value="" class="bttSubmit" id="bttnSearchForm" />
+                        </div>
+                    </div>
+</form>
+
+        </div>
+            <div class="row sectionCodeSearch clearfix">
+                <p class="subTitle" style="">Otherwise verify the store by entering the store ID that you can find on the identifying logo exhibited by the Certified Resellers</p>
+                <div class="inputField">
+                    <div class="inputLabel">
+                        <label>Code:</label>
+                    </div>
+                    <div class="data">
+                        <input class="field" id="form_storeCode_prefix" name="form_storeCode_prefix" readonly="readonly" style="width:22px;margin-right:0;border-right:0;0px;padding-right:0;" type="text" value="IN" />
+                        
+                        <input class="field validate" type="text" value="" name="form_storeCode_body" id="form_storeCode_body" style="width: 100px;border-left:none;padding-left:0" />
+                    </div>
+                </div>
+                <div class="search">
+                    <input type="button" class="bttSubmit" id="bttnSearchCode" />
+                </div>
+                <!--TEMPLATES-->
+                <div id="premiumCardTpl">
+                    <h1 style="display:none">Certified Premium Reseller</h1>
+                    <div class="storeInfo">
+                        <span class="name">{name}</span>
+                        <span class="address">{address}</span>
+                        <span class="address" style="margin-top:-10px;">{address2}</span>
+                        <div class="storeContent">
+                            <p>
+                                Come check out our exclusive Ray-Ban corner.<br/>
+Here you can find a selected range of the Brand legendary models, the latest catalog items and much more.
+                                <div>
+                                    <img src="https://www.ray-ban.com/views/storelocator/resources/images/premiumStores/IT_generic.png" width="200" height="140" />
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="searchStoreOverlay">
+                    <div class="{icon}" id="contentStoreOverlay">
+                        <span>{msg}</span>
+                    </div>
+                    <a id="closeOverlay" onclick="RB.StoreLoc.fns.showStoreOverlay(false);">
+                        <span>close</span>
+                        <span>X</span>
+                    </a>
+                </div>
+            </div>
+
+        <div id="dvCont1">
+        </div>
+        <input type="button" id="bttClosePremiumCard" value="Search Results" />
+        <div id="warranty">
+            <p>All Ray-Ban eyewear is warranted against manufacturer's defects for 2 years from the date of purchase. You must present proof of purchase from your Ray-Ban Authorized Dealer for all warranty claims.</p>
+        </div>
+        <div id="ajxloader" class="bbGalleyProgress" style="display: none;">
+            <img src="https://www.ray-ban.com/_repository/_resources/storelocator/gui/ajax-load.gif" alt="" />
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var RB=RB||(function(){
+        function RB(){
+            var _this=this;
+            _this.fns={
+                formatStrLogically:function(strHTML,n){
+                    strHTML = strHTML.replace("{n}",n);
+                    var m=strHTML.match(/{.*?}/g), l = !m? -1: m.length-1, s;
+                    for(; l>-1; l--){
+                        s=m[l];
+                        strHTML = strHTML.replace(s, $.parseJSON(s)[n===1?'s':'p']);
+                    }
+                    return strHTML;
+                },
+                formatHTML:function(strHTML, obj) {
+                    var m=strHTML.match(/{.*?}/g), l = !m? -1: m.length-1, s;
+                    for(; l>-1; l--){
+                        s=m[l];
+                        strHTML = strHTML.replace(s, obj[s.slice(1, -1)] || '');
+                    }
+                    return strHTML;
+                },
+                objQueryStr:function(str){
+                    var o = {};
+                    if (typeof str !== 'undefined') {
+                        var splits = str.split('&'), splitsIn;
+                        $.each(splits, function (idx, pair) {
+                            splitsIn = pair.toString().split('=');
+                            o[splitsIn[0]] = splitsIn.slice(1).join('=');
+                        });
+                        return o;
+
+                    }
+                    else if (!!location.search && location.search.search("=") > -1) {
+                        return _this.fns.objQueryStr(location.search.slice(1));
+                    }
+                    else {
+                        return o;
+                    }
+                },
+                objEqual:function(o1,o2){
+                    if(!$.isPlainObject(o1) || !$.isPlainObject(o2)) return false;
+                    if(!JSON) return false;
+                    return JSON.stringify(o1)===JSON.stringify(o2);
+                }
+            }
+        }
+        return new RB();
+    })();
+    RB.StoreLoc=RB.StoreLoc||(function(){
+        function StoreLoc(){
+            // vars
+            var
+            _this=this,
+            firstLand=true;
+            // DOM elements
+            var
+            $form=$('#FormStoreLocator'),
+            $mapWrap=$('#dvCont1'),
+            $form_storeCode_prefix=$('#form_storeCode_prefix'),
+            $form_storeCode_body=$('#form_storeCode_body'),
+            $searchStoreOverlay=$('#searchStoreOverlay'),
+            $extra=$('.row.sectionExtra'),
+            premiumCardPix='',
+                geo = new google.maps.Geocoder,
+            konsole=function(x){console && console.log(x)},
+            arrFormNoDOM=['$','targetLat','targetLong'],
+            tOut;
+
+            _this.Map=null; // set by googleMap partial
+            _this.apiJsp=null; // set by googleMap partial
+            _this.ctry={
+                name:'india',
+                hubName:'HUB' + $('body').attr('data-culture').replace('-','').toUpperCase(),
+                id:12,
+                certified:true,
+                geoIp:true,
+                objQueryStr:RB.fns.objQueryStr(),
+                hasAnyPremium:$.inArray(12,[14,8,12,36,3,33])>-1,
+                hasAnyServicePoint:$.inArray(12,[8])>-1,
+                hasAnyRaybanStores:($.inArray(12,[5, 65])>-1),
+                state:'raybanStoresFilterOff',
+                dummy:1
+            };
+            _this.form=(function(){
+                var o={};
+                $form.find('[name]').each(function(idx,el){
+                    o[$(el).attr('name')]=$(el);
+                });
+                $.extend(o,{$:$form,targetLat:0,targetLong:0});
+                return o;
+            })();
+            _this.webService={
+                desktop:$form.attr('action'),
+                mobile:'/_repository/_httpHandlers/StoreLocator.ashx?act=200&ctryid=' + _this.ctry.id + '&storecode='
+            };
+            _this.resultSearch={
+                totalStores:0,
+                totalStoresPremium:0,
+                totalRayBanStores:0,
+                totalStoresServicePoint:0
+            };
+            _this.showNoResultMessage=true;
+            _this.previousSearch=[];
+            _this.resultText={
+                resultList:{
+                    totNoCertified:"\u003cspan class=\"StoreResult_title\"\u003e{n} shop{\"s\":\"\",\"p\":\"s\"} found  \u003c/span\u003e",
+                    totCertified:"\u003cspan class=\"StoreResult_title_premium\"\u003eFound  {n} Certified Reselle{\"s\":\"r\",\"p\":\"rs\"}\u003c/span\u003e",
+                    totPremium:"\u003cspan class=\"StoreResult_title_premium\"\u003eFound  {n} Certified Premium Reselle{\"s\":\"r\",\"p\":\"rs\"}\u003c/span\u003e",
+                    totRayBanStores:"\u003cspan class=\"StoreResult_title_raybanstore\"\u003e\u003c/span\u003e",
+                    totServicePoint:"\u003cspan class=\"StoreResult_title_servicepoint\"\u003e\u003c/span\u003e",
+                    ofWhichPremium:"\u003cspan class=\"StoreResult_subtitle\" data-searchtype=\"onlyPremium\"\u003eof which {n} Certified Premium Reseller{\"s\":\"\",\"p\":\"s\"}\u003c/span\u003e",
+                    ofWhichRayBanStores:"\u003cspan class=\"StoreResult_subtitle\" data-searchtype=\"onlyRayBanStores\"\u003eof which {n} Certified Premium Reseller{\"s\":\"\",\"p\":\"s\"}\u003c/span\u003e",
+                    ofWhichServicePoint:"\u003cspan class=\"StoreResult_subtitle_servicepoint\" data-searchtype=\"onlyServicePoints\"\u003e\u003c/span\u003e",
+                    showAllPremium:"\u003cspan class=\"StoreResult_showAllPremium\" data-searchtype=\"allPremium\"\u003eShow all Certified Premium Resellers in India\u003c/span\u003e",
+                    showAllRayBanStores:"\u003cspan class=\"StoreResult_showAllPremium\" data-searchtype=\"allRayBanStores\"\u003e\u003c/span\u003e",
+                    showAllServicePoint:"\u003cspan class=\"StoreResult_showAllServicePoints\" data-searchtype=\"allServicePoints\"\u003e\u003c/span\u003e"
+                },
+                storeCode:{
+                    notFound:"Your search doesn\u0027t return any Ray-Ban CERTIFIED RESELLERS",
+                    found:"We are pleased to confirm that\u003cbr/\u003e\u003cspan style=\"color:red\"\u003e{storeName}\u003c/span\u003e is a {storeType}"
+                },
+                localisations:{
+                    certifiedresellers:"certified resellers",
+                    certifiedpremiumresellers:"certified premium resellers",
+                    certifiedservicepointresellers:"service points",
+                    certifiedreseller:"certified reseller",
+                    certifiedpremiumreseller:"certified premium reseller",
+                    certifiedservicepointreseller:"service point"
+                },
+                tpl:{
+                    premiumCardTpl:$('#premiumCardTpl').html(),
+                    raybanStoresTpl:$('#raybanStoresTpl').html(),
+                    overlayTpl:$searchStoreOverlay.html()
+                }
+            };
+            _this.searchtype={
+                nearby:{
+                    hidden:[
+                        'MyLat',
+                        'MyLong'
+                    ],
+                    fixed:{
+                        form_disable_proximity:false
+                    },
+                    visible:false
+                },
+                list:{
+                    visible:true
+                },
+                code:{
+                    hidden:[
+                        'form_storeCode',
+                    ]
+                },
+                codeFromQueryStr:{
+                    fixed:{
+                        form_storeCode:_this.ctry.objQueryStr.code
+                    }
+                },
+                raybanFromQueryStr:{
+                    fixed:{
+                        form_featured:'raybanstores'
+                    }
+                },
+                noProximity:{
+                    fixed:{
+                        form_disable_proximity:true,
+                    },
+                    hidden:[
+                        'MyLat',
+                        'MyLong'
+                    ],
+                    visible:true
+                },
+                proximity:{
+                    hidden:[
+                        'MyLat',
+                        'MyLong'
+                    ],
+                    fixed:{
+                        form_disable_proximity:false
+                    },
+                    visible:true
+                },
+                exactMatchWithProximity:{
+                    fixed:{
+                        form_disable_proximity:false,
+                        form_city_exact_match:true
+                    },
+                    fixedAlias:{
+                        MyLat:'targetLat',
+                        MyLong:'targetLong'
+                    },
+                    visible:true
+                },
+                allPremium:{
+                    fixed:{
+                        form_featured:'premium'
+                    },
+                    visible:false
+                },
+                allRayBanStores:{
+                    fixed:{
+                        form_featured:'raybanstores'
+                    },
+                    visible:false
+                },
+                allServicePoints:{
+                    fixed:{
+                        form_featured:'servicepoint'
+                    },
+                    visible:false
+                },
+                onlyPremium:{
+                    previousSearch:[-1],
+                    fixed:{
+                        form_featured:'premium'
+                    },
+                    visible:false
+                },
+                onlyRayBanStores:{
+                    previousSearch:[-1],
+                    fixed:{
+                        form_featured:'raybanstores'
+                    },
+                    visible:false
+                },
+                onlyServicePoints:{
+                    previousSearch:[-1],
+                    fixed:{
+                        form_featured:'servicepoint'
+                    },
+                    visible:false
+                },
+                backNoPremiumFilter:{
+                    previousSearch:[-2,-1],
+                    visible:false
+                }
+            };
+
+
+            _this.fns = {
+                validate:function ValidateForm(context) {
+                    if (!!$('.validate',context)[0] && $('.validate',context).map(function(){return $(this).val()}).get().join('')==='') {
+                        _this.fns.showError(true,context);
+                        return false;
+                    }
+                    else {
+                        _this.fns.showError(false,context);
+                        return true;
+                    }
+                },
+                showError: function(bool,context){
+                    $('#filterError')['fade'+ (bool?'In':'Out')]();
+                    $('.validate',context)[(bool?'add':'remove')+'Class']('erroredInput')
+                },
+                showGoBackBttn: function(bool){
+                    var op=bool?1:0;
+                    $('#bttClosePremiumCard').css({opacity:op, filter:'alpha(opacity='+op+')'});
+                },
+                paramify:function(obj){
+                    return $.param(obj);
+                },
+                syncCodes:function(){
+                    _this.form.form_storeCode.val($form_storeCode_body.val()?$form_storeCode_prefix.val()+$form_storeCode_body.val().trim():'');
+                },
+                syncState:function(o){
+                    var lastSearch = o.slice(-1)[0];
+                    if(lastSearch.form_featured==='raybanstores'){
+                        _this.ctry.state='raybanStoresFilterOn';
+                    }else{
+                        _this.ctry.state='raybanStoresFilterOff';
+                    }
+                },
+                actOnCurrentState:function(){
+                    var currentKlass=$('#sl').attr('class').match(/raybanStoresFilter(?:on|off)/i);
+                    if(_this.ctry.hasAnyRaybanStores){
+                        $('#sl').removeClass(currentKlass?currentKlass.toString():null);
+                        $('#sl').addClass(_this.ctry.state);
+                    }
+                },
+                addKlassToRootSl:function(){
+                    if(_this.ctry.hasAnyServicePoint) $('#sl').addClass('servicePoint');
+                    else if(_this.ctry.hasAnyRaybanStores) $('#sl').addClass('raybanStores');
+                },
+                fixResultListHeight:function(){
+                    var $sr=$('#storeResult'),$sp=$sr.find('.scroll-pane'),h = $sr.height() - $sp.position().top;
+                    $sp.height(h);
+                    _this.apiJsp.reinitialise();
+                },
+                trackLanding:function(){
+                    //konsole('in');
+                    window._gaq=window._gaq||[];
+                    var obj=$.extend({},_this.ctry.objQueryStr,{country:_this.ctry.name});
+                    window._gaq.push(['_trackEvent', 'PageLoad', 'params', JSON.stringify(obj)]);
+                },
+                winLoad:function(){
+                    // add validation to dropboxes
+                    $('.data>select').addClass('validate');
+
+                    // ####### events #########
+                    // override wcs binding
+                    $('#sl').find('input.field').unbind('focus blur');
+                    // manage field focus on click
+                    $("#sl").delegate('input.field','focusin focusout',function(e){
+                        e.stopPropagation();
+                        (function($elm,e){
+                            return !!$elm[0].id.match(/form_storeCode/)? $('[id^=form_storeCode]'):$elm
+                        })($(this),e).css("border-color",e.type==='focusout'?'#999':'#ccc');
+                    });
+                    /* move focus on storecode field if focus is on readonly storecode prefix*/
+                    $form_storeCode_prefix.bind('click',function(){$form_storeCode_body.trigger('focus')})
+                    /* remove missing filter error when typing in fields */
+                    $('#sl .field').bind('input change',function(){_this.fns.showError(false)});
+                    // sync storeCode prefix and body while typing in form_storeCode_body
+                    $form_storeCode_body.bind('change', function(e){
+                        var w=e.which;
+                        _this.fns.syncCodes();
+
+                    });
+                    $('.bttSubmit,input.validate').bind('click keyup',function(e){
+                        var w= e.which,
+                            t= e.type,
+                            $context=$(this).closest('.row');
+                        if(($(this).is('.bttSubmit') && t==='click') || ($(this).is('.validate') && w===13) ){
+                            if(_this.fns.validate($context)){
+                                if($context.data('searchtype')==='code'){
+                                    _this.fns.showStoreOverlay(true,_this.form.form_storeCode.val())
+                                        .done(function(resp){
+                                            resp.name && _this.fns.search({searchtype:'code'});
+                                        });
+                                }
+                                else{
+                                    _this.fns.search({searchtype:$context.data('searchtype')},_this.fns.showExtraIf);
+                                }
+                            }
+                        }
+
+                    });
+                    $('.row.sectionExtra').find('[data-role=showstore]').on('click',function(){
+                        _this.fns.postSearchObj({ctryId:_this.ctry.id,form_storeCode:_this.ctry.hubName},function(){
+                            RB.StoreLoc.Map.setZoom(19);
+                            $('html,body').animate({ scrollTop: $mapWrap.offset().top }, 'slow').promise().done(function(){
+                                $('#storeResult  .store-name').eq(0).trigger('click');
+                            });
+                        });
+                    });
+                    $('body').on('click','#bttClosePremiumCard',function(){
+                        _this.fns.search({searchtype:'backNoPremiumFilter'});
+                    });
+                    $mapWrap
+                        .on('click','[data-searchtype]',function(){
+                            var o={searchtype:$(this).data('searchtype')};
+                            _this.fns.search(o);
+                        })
+                        .bind('mapRendered',function(){
+                            _this.fns.printSearchResultText();
+                            _this.fns.fixResultListHeight();
+                        });
+
+                    // ####### end events #######
+
+                    // reset myLat MyLong
+                    typeof _this.form.MyLat !== 'undefined' && _this.form.MyLat.val('');
+                    typeof _this.form.MyLong !== 'undefined' && _this.form.MyLong.val('');
+
+                    // set search type
+                    if(!!$('.sectionProximity')[0]){
+                        $('.sectionProximity').data('searchtype','nearby');
+                    }
+                    if(!!$('.sectionForm')[0]){
+                        var searchtype='';
+                        if(!_this.ctry.geoIp){
+                            searchtype='list'
+                        }
+                        else if(_this.ctry.certified){
+                            searchtype='exactMatchWithProximity'
+                        }
+                        else{
+                            searchtype='proximity'
+                        }
+                        $('.sectionForm').data('searchtype',searchtype);
+                    }
+                    if(!!$('.sectionCodeSearch')[0]){
+                        $('.sectionCodeSearch').data('searchtype','code');
+                    }
+                    // init autocomplete
+                    if(_this.ctry.certified){
+                        _this.form.form_city.RB_autocomplete();
+                    }
+                    // track page landing
+                    //_this.fns.trackLanding();
+                    _this.fns.addKlassToRootSl()
+                },
+                geolocalise:function(callback){
+                    var _success=false;
+                    if(!!_this.form.MyLat.val() && !!_this.form.MyLong.val()){
+                        _success=true;
+                    }
+                    if(!_success){
+                        if (navigator.geolocation) {
+                            navigator.geolocation.getCurrentPosition(geoOK, geoKO, { timeout: 2000 });
+                        } else {
+                            var err = {};
+                            err.message = "Your device does not support geocoding\nUsing mock location"
+                            geoKO(err);
+                        }
+                    }
+                    else{
+                        andFinally()
+                    }
+                    function geoKO(err) {
+                        console.log(err.message);
+                        // fallback on geolocalise the current country, if geocode available
+                        if(geo.geocode){
+                            geo.geocode({ 'address': _this.ctry.name }, function (resp, status) {
+                                if(status==='OK'){
+                                    geoOK({
+                                        coords:{
+                                            latitude:resp[0].geometry.location.lat(),
+                                            longitude:resp[0].geometry.location.lng()
+                                        }
+                                    });
+                                }
+                                else {
+                                    andFinally();
+                                }
+                            });
+                        }else{
+                            // prob china
+                            if(_this.ctry.name==='china'){
+                                geoOK({
+                                    coords:{longitude: 121.498586, latitude: 31.239637}
+                                });
+                            }else{
+                                andFinally();
+                            }
+                        }
+                    }
+                    function geoOK(position) {
+                        setMyLocation(position.coords.latitude, position.coords.longitude);
+                        _success=true;
+                        andFinally();
+                    }
+                    function setMyLocation(latitude, longitude) {
+                        _this.form.MyLat.val(latitude);
+                        _this.form.MyLong.val(longitude);
+                    }
+                    function andFinally(){
+                        if(_success){
+                            typeof callback === 'function' && callback.call(this);
+                        }
+                    }
+                },
+                geolocaliseTarget:function(callback){
+                    var arrAddress=$form.find('input.validate:not([value=])').map(function(){return $(this).val()}).get();
+                    arrAddress.push(_this.ctry.name);
+                    geo.geocode({address:arrAddress.join(',')},callback);
+                },
+                buildSearchObj:function(args){
+
+                    var o={},
+                        searchtypeArgs=_this.searchtype[args.searchtype],
+                        context=args.DOMcontext;
+                    $.extend(o,{ctryId:_this.ctry.id});
+
+                    if(searchtypeArgs.previousSearch){
+                        $.extend(o, Array.prototype.slice.apply(_this.previousSearch,searchtypeArgs.previousSearch)[0]);
+                    }
+                    if(searchtypeArgs.fixed){
+                        $.extend(o,searchtypeArgs.fixed);
+                    }
+                    if(searchtypeArgs.hidden){
+                        var oH={};
+                        $.each(searchtypeArgs.hidden,function(idx,item){
+                            oH[item]=_this.form[item].val();
+                        })
+                        $.extend(o,oH);
+                    }
+                    if(searchtypeArgs.fixedAlias){
+                        var oFA={};
+                        $.each(searchtypeArgs.fixedAlias,function(prop){
+                            oFA[prop]=_this.form[searchtypeArgs.fixedAlias[prop]];
+                        })
+                        $.extend(o,oFA);
+                    }
+                    if(searchtypeArgs.visible){
+                        var oV={};
+                        for(var prop in _this.form){
+                            if(_this.form.hasOwnProperty(prop) && $.inArray(prop,arrFormNoDOM)===-1 && _this.form[prop].is(':visible')){
+                                oV[prop]=_this.form[prop].val();
+                            }
+                        }
+                        $.extend(o,oV);
+                    }
+                    if(_this.ctry.hasAnyRaybanStores){
+                        if(args.searchtype!=='backNoPremiumFilter' && _this.ctry.state==='raybanStoresFilterOn'){
+                            $.extend(o,{form_featured:'raybanstores'})
+                        }else if(args.searchtype==='backNoPremiumFilter'){
+                            o={
+                                ctryId:_this.ctry.id
+                            }
+                        }
+                    }
+                    return o;
+
+                },
+                showExtraIf:function(){
+                    if(_this.ctry.name==='usa' && _this.form.form_city.val().trim().toUpperCase()==='NEW YORK' ||
+                       _this.ctry.name==='china' && $.inArray(_this.form.form_city.val().trim().toUpperCase(),['SHANGHAI','上海'])>-1
+                    ){
+                        // show extra
+                        $extra.slideDown();
+
+                    }else{
+                        // hide extra
+                        $extra.slideUp();
+                    }
+                },
+                search:function(args,callback){
+                    //$('#bttClosePremiumCard').fadeOut();
+                    if(args.searchtype==='exactMatchWithProximity'){
+                        _this.fns.geolocaliseTarget(function(resp,status){
+                            if(status==='OK'){
+                                var pos=resp[0].geometry.location;
+                                _this.form.targetLat=pos.lat();
+                                _this.form.targetLong=pos.lng();
+                            }
+                            makePost();
+                        });
+                    }
+                    else{
+                        makePost();
+                    }
+                    function makePost(){
+                        var searchObj=_this.fns.buildSearchObj(args), searchNeedsCityOrCP = $.inArray(args.searchtype,['proximity','exactMatchWithProximity'])!==-1;
+
+                            if (_this.ctry.name !='japan')
+                            {
+                                if(searchObj.form_disable_proximity===false && 
+                                    searchNeedsCityOrCP & 
+                                    !_this.form.form_city.val() && 
+                                    (!_this.form.form_CP || !_this.form.form_CP.val())
+                                ){
+                                    searchObj.form_disable_proximity=true;
+                                }
+                            }
+                            else{
+                                if(searchObj.form_disable_proximity===false && searchNeedsCityOrCP && (!_this.form.form_CP || !_this.form.form_CP.val())){
+                                    searchObj.form_disable_proximity=true;
+                                }
+                            }
+                        _this.fns.postSearchObj(searchObj,callback);
+                    }
+                },
+                postSearchObj: function(searchObj,callback){
+                    if(!_this.previousSearch.length ||
+                        !RB.fns.objEqual(_this.previousSearch.slice(-1)[0],searchObj)
+                    ) _this.previousSearch.push(searchObj);
+                    $.post(_this.webService.desktop,searchObj,function(resp){
+                        $mapWrap.html(resp);
+                        typeof callback === 'function' && callback();
+                        _this.fns.syncState(_this.previousSearch);
+                        _this.fns.actOnCurrentState();
+                    })
+                },
+                showStoreOverlay:function(bool,code){
+                    if(!bool){
+                        $searchStoreOverlay.fadeOut();
+                        return false;
+                    }
+                    var o, success, premium, html;
+
+                    return $.getJSON(_this.webService.mobile + code,function(resp){
+                        success=!resp.message;
+                        type=resp.premium? 'premium': (resp.servicepoint? 'servicepoint':'');
+
+                        if(!success){
+                            o={
+                                msg: _this.resultText.storeCode.notFound
+                            };
+                        }
+                        else{
+                            o={
+                                msg:_this.resultText.storeCode.found,
+                                storeName:resp.name,
+                                storeType:_this.resultText.localisations['certified'+ type +'reseller'],
+                                icon:type + 'Icon'
+                            }
+                        }
+
+                        o.msg=RB.fns.formatHTML(o.msg,o);
+                        html=RB.fns.formatHTML(_this.resultText.tpl.overlayTpl,o);
+                        $searchStoreOverlay.html(html).fadeIn();
+                    })
+                },
+                printSearchResultText:function(){
+                    var
+                        prevSearch =_this.previousSearch.slice(-1)[0],
+                        searched4feature='form_featured' in prevSearch,
+                        searched4premium= prevSearch.form_featured==='premium',
+                        searched4raybanstore= prevSearch.form_featured==='raybanstores',
+                        searched4servicepoint= prevSearch.form_featured==='servicepoint',
+                        searched4code='form_storeCode' in prevSearch,
+                        anyPremium=_this.resultSearch.totalStoresPremium>0,
+                        anyRayBanStores=_this.resultSearch.totalRayBanStores>0,
+                        anyServicePoint=_this.resultSearch.totalStoresServicePoint>0,
+                        out=[], fn, str, n, showGoBack
+                    ;
+
+                    /* build title */
+                    if(!RB.StoreLoc.ctry.certified){
+                        fn=RB.fns.formatStrLogically;
+                        str=_this.resultText.resultList.totNoCertified;
+                        n=_this.resultSearch.totalStores;
+
+                    }
+                    if(searched4raybanstore){
+                        fn=RB.fns.formatStrLogically;
+                        str=_this.resultText.resultList.totRayBanStores;
+                        n=_this.resultSearch.totalRayBanStores;
+                        showGoBack=true;
+                    }
+                    else if(!searched4feature && !searched4code){
+                        fn=RB.fns.formatStrLogically;
+                        str=_this.resultText.resultList.totCertified;
+                        n=_this.resultSearch.totalStores;
+                        showGoBack=false;
+
+                    }
+                    else if(searched4premium){
+                        fn=RB.fns.formatStrLogically;
+                        str=_this.resultText.resultList.totPremium;
+                        n=_this.resultSearch.totalStoresPremium;
+                        showGoBack=true;
+                    }
+                    else if(searched4servicepoint){
+                        fn=RB.fns.formatStrLogically;
+                        str=_this.resultText.resultList.totServicePoint;
+                        n=_this.resultSearch.totalStoresServicePoint;
+                        showGoBack=true;
+                    }
+                    else { //searched4code
+                        fn=RB.fns.formatStrLogically;
+                        str=_this.resultText.resultList[
+                            _this.resultSearch.totalStoresPremium?
+                            'totPremium':
+                            _this.resultSearch.totalRayBanStores?
+                            'totRayBanStores':
+                            (_this.resultSearch.totalStoresServicePoint?
+                            'totServicePoint':
+                            'totCertified')
+                        ];
+                        n=_this.resultSearch.totalStores;
+                        showGoBack=false;
+
+                    }
+                    out.push(fn(str,n));
+
+                    /* build subtitle, if any */
+                    if(_this.ctry.certified  && !searched4feature && !searched4code){
+                        if(_this.ctry.hasAnyPremium){
+                            if(anyPremium){
+                                fn=RB.fns.formatStrLogically;
+                                str=_this.resultText.resultList.ofWhichPremium;
+                                n=_this.resultSearch.totalStoresPremium
+                            }
+                            else{
+                                fn=$.trim;
+                                str=_this.resultText.resultList.showAllPremium;
+                                n=0;
+                            }
+                            out.push(fn(str,n));
+                        }
+                        if(_this.ctry.hasAnyServicePoint){
+                            if(anyServicePoint){
+                                fn=RB.fns.formatStrLogically;
+                                str=_this.resultText.resultList.ofWhichServicePoint;
+                                n=_this.resultSearch.totalStoresServicePoint
+                            }
+                            else{
+                                fn=$.trim;
+                                str=_this.resultText.resultList.showAllServicePoint;
+                                n=0;
+                            }
+                            out.push(fn(str,n));
+                        }
+                    }
+                    if(_this.ctry.hasAnyRaybanStores && !searched4raybanstore){
+                        if(anyRayBanStores){
+                            fn=RB.fns.formatStrLogically;
+                            str=_this.resultText.resultList.ofWhichRayBanStores;
+                            n=_this.resultSearch.totalRayBanStores
+                        }
+                        else{
+                            fn=$.trim;
+                            str=_this.resultText.resultList.showAllRayBanStores;
+                            n=0;
+                        }
+                        out.push(fn(str,n));
+                    }
+                    $('#searchResultText').html(out.join(''));
+                    (RB.StoreLoc.ctry.certified && _this.fns.showGoBackBttn(showGoBack)) ||
+                    (RB.StoreLoc.ctry.hasAnyRaybanStores && _this.fns.showGoBackBttn(showGoBack));
+
+                },
+                showPremiumCard:function(bool,marker,$liMarker){
+                    var $premiumCard=$('#premiumCard');
+                    if(bool){
+                        $premiumCard.html(RB.fns.formatHTML(_this.resultText.tpl.premiumCardTpl,marker));
+                        $liMarker.find('ul').html($('<li></li>').append($premiumCard));
+                        $premiumCard.show();
+                    }
+                    else{
+                        //$premiumCard.fadeOut();
+                    }
+                },
+                showRayBanStores:function(bool,marker,$liMarker){
+                    if(bool){
+                        $('#raybanStores').remove();
+                        $liMarker.find('ul').html('<li><div id="raybanStores" style="background-image:url()">'+RB.fns.formatHTML(_this.resultText.tpl.raybanStoresTpl,marker)+'</div></li>');
+                        $('#raybanStores').show();
+                    }
+                },
+                resetSearchType:function(){
+                    var obj=_this.searchtype;
+                    //debugger
+                    reset(obj);
+                    function reset(obj){
+                        for(prop in obj){
+                            if (obj.hasOwnProperty(prop)){
+                                if(typeof obj[prop] ==='object'){
+                                    console.log(obj[prop])
+                                    reset(obj[prop]);
+                                }
+                                else{
+                                    obj[prop]=false
+                                    console.log(obj[prop])
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            _this.fns.trackLanding();
+            $(window).load(function(){
+                _this.fns.winLoad();
+                if(_this.ctry.certified && _this.ctry.objQueryStr.code){
+                    _this.fns.showStoreOverlay(true,_this.ctry.objQueryStr.code).done(function(resp){
+                        resp.name && _this.fns.search({searchtype:'codeFromQueryStr'});
+
+                    });
+                }
+                else if(_this.ctry.objQueryStr.raybanstore==='1') {
+                    _this.fns.geolocalise(function(){
+                        _this.showNoResultMessage=false;
+                        _this.fns.search({searchtype:'raybanFromQueryStr'},function(){_this.showNoResultMessage=true;});
+                    });
+                }
+                else if(_this.ctry.geoIp){
+                    _this.fns.geolocalise(function(){
+                        if(!_this.ctry.certified){
+                            _this.showNoResultMessage=false;
+                            _this.fns.search({searchtype:'nearby'},function(){_this.showNoResultMessage=true;});
+                        }
+                    });
+                }
+            });
+        }
+
+
+        return new StoreLoc();
+    })();
+</script>
+
+            </div>
+        </div>
+    </div>
+
+<footer id="footer" class="clearfix">
+    <div class="footerContainer">
+        <div class="footer_white container_12 clearfix">
+            <div id="country_selector" class="grid_3">
+<div class="over">
+    <p class="country">
+        <a href="javascript:;" id="nation">India</a><span class="countryselector"></span>
+    </p>
+    
+</div>
+
+</div>
+<div id="world">
+    <div class="continentWrap container_12">
+                        <ul class="Africa">
+                            <li class="continent">
+                                Africa
+                            </li>
+                            <li class="countryList">
+
+                                <span class=""></span>
+                                <div class="altCountryList">
+                                    <ul class="showCountry ">
+                                                    <li><a href="https://www.ray-ban.com/mea/ar" lang="ar-M1">Africa AR</a></li>
+                                                    <li><a href="https://www.ray-ban.com/mea/en" lang="en-M3">Africa EN</a></li>
+                                                    <li class=""><a href="../mea/fr.html" lang="fr-M2">Africa FR</a></li>
+                                                    <li class=""><a href="../southafrica.html" lang="en-ZA">South Africa</a></li>
+
+
+                                    </ul>
+                </div>
+            </li>            
+        </ul>
+                        <ul class="America">
+                            <li class="continent">
+                                America
+                            </li>
+                            <li class="countryList">
+
+                                <span class=""></span>
+                                <div class="altCountryList">
+                                    <ul class="showCountry ">
+                                                    <li class=""><a href="../argentina.html" lang="es-AR">Argentina</a></li>
+                                                    <li class=""><a href="../brazil.html" lang="pt-BR">Brasil</a></li>
+                                                    <li class=""><a href="../canada/en.html" lang="en-CA">Canada (EN)</a></li>
+                                                    <li class=""><a href="../canada/fr.html" lang="fr-CA">Canada (FR)</a></li>
+                                                    <li class=""><a href="../latam.html" lang="es-LA">Latin America</a></li>
+                                                    <li class=""><a href="../mexico.html" lang="es-MX">México</a></li>
+                                                    <li class=""><a href="../usa.html" lang="en-US">USA</a></li>
+
+
+                                    </ul>
+                </div>
+            </li>            
+        </ul>
+                        <ul class="Asia">
+                            <li class="continent">
+                                Asia
+                            </li>
+                            <li class="countryList">
+
+                                <span class="active"></span>
+                                <div class="altCountryList">
+                                    <ul class="showCountry active">
+                                                    <li class=""><a href="../hongkong/en.html" lang="en-HK">Hong Kong - 香港</a></li>
+                                                    <li class="select"><a href="../india.html" lang="hi-IN">India</a></li>
+                                                    <li class=""><a href="../indonesia.html" lang="en-ID">Indonesia</a></li>
+                                                    <li class=""><a href="../israel.html" lang="en-IL">Israel</a></li>
+                                                    <li class=""><a href="../korea.html" lang="ko-KR">Korea</a></li>
+                                                    <li class=""><a href="../malaysia.html" lang="en-MY">Malaysia</a></li>
+                                                    <li class=""><a href="../mea/ar.html" lang="ar-M1">Middle East AR</a></li>
+                                                    <li class=""><a href="../mea/en.html" lang="en-M3">Middle East EN</a></li>
+                                                    <li><a href="https://www.ray-ban.com/mea/fr" lang="fr-M2">Middle East FR</a></li>
+                                                    <li class=""><a href="../pakistan.html" lang="en-PK">Pakistan</a></li>
+                                                    <li class=""><a href="../russia.html" lang="ru-RU">Russia</a></li>
+                                                    <li class=""><a href="../singapore.html" lang="en-SG">Singapore</a></li>
+                                                    <li class=""><a href="../taiwan.html" lang="zh-TW">Taiwan</a></li>
+                                                    <li class=""><a href="../thailand.html" lang="en-TH">Thailand</a></li>
+                                                    <li class=""><a href="../turkey.html" lang="tr-TR">Türkiye</a></li>
+                                                    <li class=""><a href="../vietnam.html" lang="en-VN">Vietnam</a></li>
+                                                    <li class=""><a href="http://www.ray-ban.com.cn/zh" lang="zh-CN">中国 (简体中文)</a></li>
+                                                    <li class=""><a href="../japan.html" lang="ja-JP">日本</a></li>
+                                                    <li class=""><a href="../hongkong/zh.html" lang="zh-HK">香港 (简体中文)</a></li>
+
+
+                                    </ul>
+                </div>
+            </li>            
+        </ul>
+                        <ul class="Europe">
+                            <li class="continent">
+                                Europe
+                            </li>
+                            <li class="countryList">
+
+                                <span class=""></span>
+                                <div class="altCountryList">
+                                    <ul class="showCountry ">
+                                                    <li class=""><a href="../belgium/nl.html" lang="nl-BE">België (NL)</a></li>
+                                                    <li class=""><a href="../belgium/fr.html" lang="fr-BE">Belgique (FR)</a></li>
+                                                    <li class=""><a href="../croatia.html" lang="hr-HR">Croatia</a></li>
+                                                    <li class=""><a href="../czechrepublic.html" lang="en-CZ">Czech Republic</a></li>
+                                                    <li class=""><a href="../denmark.html" lang="en-DK">Denmark</a></li>
+                                                    <li class=""><a href="../germany.html" lang="de-DE">Deutschland</a></li>
+                                                    <li class=""><a href="../spain.html" lang="es-ES">España</a></li>
+                                                    <li class=""><a href="../estonia.html" lang="et-EE">Estonia</a></li>
+                                                    <li class=""><a href="../finland.html" lang="fi-FI">Finland</a></li>
+                                                    <li class=""><a href="../france.html" lang="fr-FR">France</a></li>
+                                                    <li class=""><a href="../greece.html" lang="el-GR">Greece</a></li>
+                                                    <li class=""><a href="../hungary.html" lang="en-HU">Hungary</a></li>
+                                                    <li class=""><a href="../ireland.html" lang="en-IE">Ireland</a></li>
+                                                    <li class=""><a href="../italy.html" lang="it-IT">Italia</a></li>
+                                                    <li class=""><a href="../latvia.html" lang="lv-LV">Latvia</a></li>
+                                                    <li class=""><a href="../lithuania.html" lang="lt-LT">Lithuania</a></li>
+                                                    <li class=""><a href="../malta.html" lang="en-MT">Malta</a></li>
+                                                    <li class=""><a href="../netherlands.html" lang="nl-NL">Netherlands</a></li>
+                                                    <li class=""><a href="../norway.html" lang="en-NO">Norway</a></li>
+                                                    <li class=""><a href="../austria.html" lang="de-AT">Österreich</a></li>
+                                                    <li class=""><a href="../poland.html" lang="pl-PL">Polska</a></li>
+                                                    <li class=""><a href="../portugal.html" lang="pt-PT">Portugal</a></li>
+                                                    <li class=""><a href="../switzerland/de.html" lang="de-CH">Schweiz (DE)</a></li>
+                                                    <li class=""><a href="../slovakia.html" lang="en-SK">Slovakia</a></li>
+                                                    <li class=""><a href="../southeasteurope.html" lang="en-S1">South East Europe</a></li>
+                                                    <li class=""><a href="../switzerland/fr.html" lang="fr-CH">Suisse (FR)</a></li>
+                                                    <li class=""><a href="../switzerland/it.html" lang="it-CH">Svizzera (IT)</a></li>
+                                                    <li class=""><a href="../sweden.html" lang="en-SE">Sweden</a></li>
+                                                    <li class=""><a href="../switzerland/en.html" lang="en-CH">Switzerland (EN)</a></li>
+                                                    <li class=""><a href="../uk.html" lang="en-GB">UK</a></li>
+                                                    <li class=""><a href="../ukraine.html" lang="uk-UA">Ukraine</a></li>
+
+
+                                    </ul>
+                </div>
+            </li>            
+        </ul>
+                        <ul class="Oceania">
+                            <li class="continent">
+                                Oceania
+                            </li>
+                            <li class="countryList">
+
+                                <span class=""></span>
+                                <div class="altCountryList">
+                                    <ul class="showCountry ">
+                                                    <li class=""><a href="../australia.html" lang="en-AU">Australia</a></li>
+
+
+                                    </ul>
+                </div>
+            </li>            
+        </ul>
+            <p class=" international">
+                 <a href="../international.html" lang="en">Visit International site</a>
+            </p>
+         <span id="countryCloseButton" class="dmp-close-btn-no-bottom dmp-selected-continent"></span>
+    </div>
+   
+</div>
+            <div id="footer_menu" class="grid_6">
+	            <ul>
+                    
+
+					<li class="grid_2"><a href="https://www.ray-ban.com/india/privacy-policy">PRIVACY POLICY</a></li>
+                    
+                       <li class="grid_2"><a href="https://www.ray-ban.com/india/report-fakes">Report fakes</a></li> 
+                    <li class="grid_2">
+	 		            <a href="https://www.ray-ban.com/india/sitemap">Site Map</a>
+	 	            </li>
+                    
+                    <!-- Controls an amount of li in footer_menu, and sets proportional size to fit; -->
+                    <script language="javascript">
+                        $(document).ready(function () {
+                            // If links amount is 5 
+                            if ($("#footer_menu li").size() > 4) {
+                                //$("#footer_menu li").css("width", "96px");
+                                $("#footer_menu li a").css("font-size", "14px");
+                            }
+                            // If links amount is 4 
+                            //else if ($("#footer_menu li").size() > 3) {
+                                $("#footer_menu li").css("width", "auto");
+                            //}
+                        });
+                    </script>
+                </ul>
+            </div>
+
+            <div id="social_links" class="grid_3 clearfix">
+	            <ul>
+                
+	 	            <li class="facebook"><a href="http://www.facebook.com/RayBan" target="_blank" ></a></li>
+	 	            <li class="twitter"><a href="https://twitter.com/ray_ban" target="_blank" ></a></li>
+                    <li class="googlePlus"><a href="https://plus.google.com/u/0/117926193424758795784/" target="_blank" ></a></li>
+                    <li class="pinterest"><a href="https://pinterest.com/raybanofficial/" target="_blank" ></a></li>
+                    <li class="instagram"><a href="https://www.instagram.com/rayban/" target="_blank"></a></li>
+	 	            <li class="youTube"><a href="http://www.youtube.com/user/neverhidenoise" target="_blank" ></a></li>
+	 	            <li class="youTube"><a href="http://www.youtube.com/user/neverhidefilms" target="_blank" ></a></li>
+	            </ul>
+            </div>
+        </div>
+    </div>	    
+    <div class="clear" style="border-bottom:1px solid #999"></div>
+    <div id="copyright" class="container_12">
+        <span class="footerDisclaimer disclaimer1">
+            Copyright &copy;2017 Luxottica Group S.p.A.. All Rights Reserved -
+        </span>
+        
+        <span class="footerDisclaimer disclaimer1">Pictures and images on this website are for illustration purposes only. No qualities or characteristics of the products depicted herein could be inferred from the relevant pictures.</span>
+        <span class="footerDisclaimer disclaimer1">Certain activities undertaken by Luxottica Group S.p.A. may be licensed under US Patent No. 6,624,843.</span>
+        
+        
+    </div>
+    
+</footer>
+<div class="dmp-fadeout-full dmp-hide"></div>
+<div class="dmp-fadeout-right-nav dmp-hide"></div>
+<div class="dmp-fadeout dmp-hide"></div>
+
+    
+    
+    <!-- JS Libraries -->
+    <script src="https://www.ray-ban.com/_repository/_ecma/2012/master_02.es5.min.js" type="text/javascript"></script>
+    <script src="https://www.ray-ban.com/_repository/_ecma/jquery.unobtrusive-ajax.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+    <script src="https://www.ray-ban.com/_repository/_ecma/2012/jquery.infinitescroll.es5.min.js" type="text/javascript"></script>
+
+</body>
+</html>
