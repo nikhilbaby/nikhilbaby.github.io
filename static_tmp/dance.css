@@ -81,11 +81,11 @@ a:hover {
     left: 130px;
     top: 40%;
     margin-top: 218px;
-    -webkit-animation: logo 34s 1;
-    -moz-animation: logo 34s 1;
-    -ms-animation: logo 34s 1;
-    -o-animation: logo 34s 1;
-    animation: logo 34s 1;
+    -webkit-animation: logo 60s 1;
+    -moz-animation: logo 60s 1;
+    -ms-animation: logo 60s 1;
+    -o-animation: logo 60s 1;
+    animation: logo 60s 1;
 }
 
 .social-links li {
